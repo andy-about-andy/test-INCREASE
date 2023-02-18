@@ -76,13 +76,6 @@ const createWebp = () => {
 
 // SVG
 
-const svg = () => {
-  return gulp.src('source/img/svg/*.svg')
-  // return gulp.src(['source/img/**/*.svg', '!source/img/sprite.svg', '!source/img/download/*.svg'])
-    .pipe(svgmin())
-    .pipe(gulp.dest('build/img/svg'))
-}
-
 const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
   .pipe(svgmin())
@@ -98,6 +91,7 @@ const sprite = () => {
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
+    'source/favicons/*.{svg,png}',
     'source/*.ico',
     'source/manifest.webmanifest',
   ], {
@@ -105,12 +99,6 @@ const copy = (done) => {
   })
     .pipe(gulp.dest('build'))
   done();
-
-  // gulp.src([
-  //   'source/img/sprite.svg',
-  // ])
-  //   .pipe(gulp.dest('build/img'))
-  // done();
 }
 
 // Clean
@@ -157,7 +145,6 @@ export const build = gulp.series(
     styles,
     html,
     scripts,
-    svg,
     sprite,
     optimizeImages,
     createWebp
@@ -174,7 +161,6 @@ export default gulp.series(
     html,
     scripts,
     copyImages,
-    svg,
     sprite,
     createWebp
   ),
