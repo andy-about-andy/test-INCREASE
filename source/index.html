@@ -16,18 +16,24 @@
       <header>
         <div class="container main-header">
           <div class="main-header__wrap">
-            <a class="main-header__link-logo">
-              <svg class="main-header__logo" aria-hidden="true" focusable="false" width="122" height="32">
-                <use href="img/sprite.svg#icon-logo"></use>
-              </svg>
-            </a>
+            <div class="main-header__logo-inner">
+              <a class="main-header__link-logo">
+                <svg class="main-header__logo" aria-hidden="true" focusable="false" width="116" height="30">
+                  <use href="img/sprite.svg#icon-logo"></use>
+                </svg>
+              </a>
+            </div>
             <nav class="main-nav">
+              <h2 class="visually-hidden">Навигация по сайту</h2>
               <ul class="main-nav__list">
                 <li class="main-nav__item">
                   <a class="main-nav__link" href="#">Главная</a>
                 </li>
                 <li class="main-nav__item">
                   <a class="main-nav__link" href="#">О нас</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Отзывы</a>
                 </li>
               </ul>
             </nav>
@@ -36,13 +42,13 @@
               <address>
                 <ul class="main-header__contacts-list">
                   <li class="main-header__contacts-item">
-                    <a class="main-header__phone" href="tel:+375293711041">+375 (29) 371-10-41</a>
+                    <a class="main-header__link" href="tel:+375293711041">+375 (29) 371-10-41</a>
                   </li>
                   <li class="main-header__contacts-item">
-                    <a class="main-header__emali" href="mailto:info@increase.by">info@increase.by</a>
+                    <a class="main-header__link main-header__link--email" href="mailto:info@increase.by">info@increase.by</a>
                   </li>
                   <li class="main-header__contacts-item">
-                    <a class="main-header__link" href="#">www.increase.by</a>
+                    <a class="main-header__link main-header__link--link" href="#">www.increase.by</a>
                   </li>
                 </ul>
               </address>
@@ -52,13 +58,13 @@
       </header>
       <main>
         <section class="website-development">
-          <div class="container website-development-wrap">
+          <div class="container website-development__wrap">
             <h1 class="visually-hidden">Всё о создании сайтов.</h1>
             <aside class="sidebar">
               <h2>Создание сайтов</h2>
               <ul class="sidebar__list">
                 <li class="sidebar__item">
-                  <a class="sidebar__link" href="#">Изготовление сайтов «под ключ»</a>
+                  <a class="sidebar__link" href="#turnkey-websites">Изготовление сайтов «под ключ»</a>
                 </li>
                 <li class="sidebar__item">
                   <a class="sidebar__link" href="#">Как мы работаем</a>
@@ -89,10 +95,13 @@
                 </li>
               </ul>
             </aside>
-            <div class="description">
-              <p class="description__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
+            <article class="description" id="turnkey-websites">
+              <div class="description__text-inner">
+                <h3>Изготовление сайтов «под ключ»</h3>
+                <p class="description__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </div>
               <div class="description__card">
                 <ul class="description__card-list">
                   <li class="description__card-item">
@@ -161,59 +170,57 @@
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                 </p>
               </div>
-            </div>
+            </article>
           </div>
         </section>
       </main>
       <footer>
         <div class="container main-footer">
           <div class="main-footer__wrap">
-            <div class="main-footer__information-container">
-              <ul class="main-footer__information-list">
-                <li class="main-footer__information-item">
-                  Пункт 01
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 02
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 03
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 04
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 05
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 06
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 07
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 08
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 09
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 10
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 11
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 12
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 13
-                </li>
-                <li class="main-footer__information-item">
-                  Пункт 14
-                </li>
-              </ul>
-            </div>
+            <ul class="main-footer__information-list">
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 01</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 02</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 03</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 04</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 05</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 06</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 07</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 08</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 09</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 10</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 11</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 12</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 13</a>
+              </li>
+              <li class="main-footer__information-item">
+                <a class="main-footer__information__link" href="#">Пункт 14</a>
+              </li>
+            </ul>
             <nav class="footer-nav">
               <ul class="footer-nav__list">
                 <li class="footer-nav__item">
@@ -240,11 +247,13 @@
               </ul>
             </nav>
             <div class="main-footer__container">
-              <a class="main-footer__link-logo" href="index.html">
-                <svg class="main-footer__logo" aria-hidden="true" focusable="false" width="122" height="32">
-                  <use href="img/sprite.svg#icon-logo"></use>
-                </svg>
-              </a>
+              <div class="main-footer__logo-inner">
+                <a class="main-footer__link-logo" href="index.html">
+                  <svg class="main-footer__logo" aria-hidden="true" focusable="false" width="200" height="50">
+                    <use href="img/sprite.svg#icon-footer-logo"></use>
+                  </svg>
+                </a>
+              </div>
               <div class="main-footer__social social">
                 <ul class="social__list">
                   <li class="social__item">
@@ -270,6 +279,5 @@
         </div>
       </footer>
     </div>
-    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>

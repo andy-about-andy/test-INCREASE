@@ -1,0 +1,22 @@
+.website-development__wrap {
+  display: grid;
+  grid-template-columns: 184px 1fr;
+  grid-template-rows: minmax(335px, auto) 1fr;
+  column-gap: 20px;
+  max-width: 1100px;
+  min-width: 900px;
+  min-height: 300px;
+  margin: 0 auto;
+
+  @media (max-width: @vp-899) {
+    max-width: 899px;
+    min-width: 768px;
+  }
+
+  @media (max-width: @vp-767) {
+    display: flex;
+    flex-direction: column;
+    max-width: 767px;
+    min-width: 320px;
+  }
+}
