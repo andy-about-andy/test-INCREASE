@@ -1,0 +1,35 @@
+.social {
+  background-color: @color-black;
+}
+
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 24px);
+  gap: 16px;
+  padding: 25px 25px 16px;
+  margin: 0;
+  list-style-type: none;
+
+  @media (max-width: @vp-899) {
+    padding: 16px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.social__icon {
+  fill: #df9730;
+}
+
+.social__link:hover .social__icon {
+  fill: @color-default-white;
+}
+
+.social__link:active .social__icon {
+  fill: @color-default-white;
+  opacity: 0.5;
+}
